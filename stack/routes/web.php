@@ -25,3 +25,6 @@ Route::post('/question/ask', 'QuestionsController@store');
 Route::get('question/{question}', 'QuestionsController@show');
 Route::resource('question', 'QuestionsController');
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('{id}/answer', 'AnswersController@create');
+Route::post('/answer', 'AnswersController@store');

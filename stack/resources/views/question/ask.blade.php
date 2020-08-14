@@ -4,6 +4,12 @@
 
 @section('content')
 
+@if(session('success'))
+<div class="alert alert-success">
+{{ session('success')}}
+</div>
+@endif
+
 <h2>Buatlah Pertanyaan ke publik</h2>
 <div class="container">
     <form action="" method="POST">
