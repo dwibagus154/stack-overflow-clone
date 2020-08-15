@@ -37,16 +37,16 @@
     <form action="" method="POST">
         @csrf
         <div class="form-group">
-            <label for="comment" class="form-control-label" style="font-size: 24px;">komen atas jawaban ini</label>
+            <label for="comment" class="form-control-label" style="font-size: 24px;">komen atas Pertanyaan ini</label>
             <textarea name="comment" id="comment" rows="5" class="ckeditor form-control my-editor">
             {{ old('comment') }}</textarea>
             <small id="passwordHelpBlock" class="form-text text-muted">
-                Berisi Jawaban pada Pertanyaan yang ditanyakan
+                Berisi komen atas Pertanyaan yang ditanyakan
             </small>
         </div>
         <input type="text" value="{{$question->id}}" name="question_id" style="display: none;"></input>
         <input type="text" value="{{$question->user->id}}" name="user_id" style="display: none;"></input>
-        <button type="submit" class="btn btn-primary">Jawab</button>
+        <button type="submit" class="btn btn-primary">Komen</button>
     </form>
 </div>
 

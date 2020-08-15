@@ -46,6 +46,18 @@ class User extends Authenticatable
 
     public function question()
     {
-        return $this->hasMany(Questionr::class);
+        return $this->hasMany(Question::class);
+    }
+    public function pcomment()
+    {
+        return $this->hasMany(Pcomment::class);
+    }
+    public function jcomment()
+    {
+        return $this->hasMany(Jcomment::class);
+    }
+    public function reputasi_user()
+    {
+        return $this->hasMany(Reputasi_User::class);
     }
 }

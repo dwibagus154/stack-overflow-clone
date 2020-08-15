@@ -41,12 +41,12 @@
             <textarea name="comment" id="comment" rows="5" class="ckeditor form-control my-editor">
             {{ old('comment') }}</textarea>
             <small id="passwordHelpBlock" class="form-text text-muted">
-                Berisi Jawaban pada Pertanyaan yang ditanyakan
+                Berisi komen atas jawaban yang ditanyakan
             </small>
         </div>
         <input type="text" value="{{$answer->id}}" name="answer_id" style="display: none;"></input>
         <input type="text" value="{{$answer->user->id}}" name="user_id" style="display: none;"></input>
-        <button type="submit" class="btn btn-primary">Jawab</button>
+        <button type="submit" class="btn btn-primary">Komen</button>
     </form>
 </div>
 
