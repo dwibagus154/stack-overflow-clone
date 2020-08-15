@@ -20,6 +20,7 @@
 
     <!-- Template -->
     <link rel="stylesheet" href="{{ asset('dashboard/public/graindashboard/css/graindashboard.css') }}">
+    @stack('head-script')
 
 </head>
 
@@ -264,6 +265,8 @@
         $.GDCore.components.GDChartistBar.init('.js-bar-chart');
         $.GDCore.components.GDChartistDonut.init('.js-donut-chart');
     </script>
+
+    @stack('end-script')
 </body>
 
 </html>

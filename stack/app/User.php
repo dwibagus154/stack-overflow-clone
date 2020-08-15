@@ -39,10 +39,13 @@ class User extends Authenticatable
 
     protected $primaryKey = 'id';
 
-    public function Answer()
+    public function answer()
     {
-        return $table->hasMany('App\Answer', 'user_id');
+        return $this->hasMany(Answer::class);
     }
 
-
+    public function question()
+    {
+        return $this->hasMany(Questionr::class);
+    }
 }

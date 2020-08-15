@@ -19,13 +19,13 @@ class AnswersController extends Controller
             'answer' => 'required'
         ]);
 
-        //Answer::create($request->all());
-        $answer = new answer;
-            $answer->user_id               = Auth::id();
-            $answer->isvote                = $request->isvote;
-            $answer->answer                = $request->answer;
-            $answer->question_id           = $request->question_id;
-        $answer->save();
+        Answer::create($request->all());
+        // $answer = new answer;
+        //     $answer->user_id               = Auth::id();
+        //     $answer->isvote                = $request->isvote;
+        //     $answer->answer                = $request->answer;
+        //     $answer->question_id           = $request->question_id;
+        // $answer->save();
         //return $answer;
         return redirect('/question')->with('success', 'Jawaban Berhasil Dibuat!');
     }

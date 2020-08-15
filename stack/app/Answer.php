@@ -8,16 +8,22 @@ class Answer extends Model
 {
     protected $fillable = ['answer', 'isvote', 'user_id', 'question_id'];
 
+    protected $table = 'answers';
+
     protected $primarykey = "id";
 
     public function User()
     {
-        return $table->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 
-    public function Question()
+    public function question()
     {
-        return $table->belongsTo('App\Question');
+        return $this->belongsTo(Question::class);
     }
 
+    public function jcomment()
+    {
+        return $this->hasMany(Jcomment::class);
+    }
 }
