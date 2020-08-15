@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Answer;
 use Illuminate\Support\Facades\Auth;
-use App\Pcomment;
+//use App\Pcomment;
+use App\Jcomment;
 use Illuminate\Http\Request;
 
 class CommentJawabanController extends Controller
@@ -22,7 +23,7 @@ class CommentJawabanController extends Controller
             'comment' => 'required'
         ]);
 
-        Pcomment::create($request->all());
+        Jcomment::create($request->all());
         return redirect('/question')->with('success', 'Jawaban Berhasil Dibuat!');
     }
 }
